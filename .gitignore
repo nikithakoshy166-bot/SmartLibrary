@@ -11,6 +11,7 @@ backend/venv/
 
 # Environment Variables
 backend/.env
+.env
 
 # Node Modules
 frontend/node_modules/
