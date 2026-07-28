@@ -1,6 +1,25 @@
 # 📚 Smart Library Management System
 
-A full-stack **Smart Library Management System** built using **FastAPI**, **React (Vite)**, and **MySQL**. The application enables users to register, log in, browse books, borrow and return books, and view borrowing history. It also includes a dashboard displaying library statistics.
+![React](https://img.shields.io/badge/Frontend-React-blue)
+![FastAPI](https://img.shields.io/badge/Backend-FastAPI-green)
+![MySQL](https://img.shields.io/badge/Database-MySQL-orange)
+![Vercel](https://img.shields.io/badge/Frontend-Vercel-black)
+![Render](https://img.shields.io/badge/Backend-Render-purple)
+
+A full-stack **Smart Library Management System** built using **FastAPI**, **React (Vite)**, and **MySQL**. The application enables users to register, log in securely, browse books, borrow and return books, and view borrowing history. It also includes a dashboard displaying real-time library statistics.
+
+---
+
+# 🌐 Live Demo
+
+### Frontend (Vercel)
+https://smart-library-tau.vercel.app
+
+### Backend API (Render)
+https://smartlibrary-backend-7rip.onrender.com
+
+### Swagger Documentation
+https://smartlibrary-backend-7rip.onrender.com/docs
 
 ---
 
@@ -8,8 +27,8 @@ A full-stack **Smart Library Management System** built using **FastAPI**, **Reac
 
 ### 👤 User Management
 - User Registration
-- User Login
-- Secure Authentication
+- Secure User Login
+- Password Encryption using Bcrypt
 - Logout Functionality
 
 ### 📚 Book Management
@@ -17,13 +36,13 @@ A full-stack **Smart Library Management System** built using **FastAPI**, **Reac
 - Search Books
 - Borrow Books
 - Return Books
-- Automatic Availability Update
+- Automatic Book Availability Update
 
 ### 📖 Borrow Management
 - Borrow History
 - Due Date Tracking
-- Fine Calculation
 - Return Status
+- Fine Calculation
 
 ### 📊 Dashboard
 - Total Registered Users
@@ -33,7 +52,7 @@ A full-stack **Smart Library Management System** built using **FastAPI**, **Reac
 
 ---
 
-## 🛠️ Tech Stack
+# 🛠️ Tech Stack
 
 ### Frontend
 - React
@@ -47,25 +66,39 @@ A full-stack **Smart Library Management System** built using **FastAPI**, **Reac
 - SQLAlchemy
 - Pydantic
 - Uvicorn
+- Passlib (Bcrypt)
 
 ### Database
-- MySQL
+- MySQL (Railway Cloud)
+
+### Deployment
+- Frontend: Vercel
+- Backend: Render
+- Database: Railway
 
 ---
 
-## 📂 Project Structure
+# 📂 Project Structure
 
 ```
 SmartLibrary/
 │
 ├── backend/
-│   ├── app/
+│   ├── routers/
+│   ├── models.py
+│   ├── schemas.py
+│   ├── database.py
+│   ├── auth.py
 │   ├── main.py
 │   ├── requirements.txt
 │   └── .env
 │
 ├── frontend/
 │   ├── src/
+│   │   ├── pages/
+│   │   ├── components/
+│   │   ├── services/
+│   │   └── App.jsx
 │   ├── public/
 │   ├── package.json
 │   └── vite.config.js
@@ -76,18 +109,19 @@ SmartLibrary/
 
 ---
 
-## ⚙️ Installation
+# ⚙️ Installation
 
-### 1. Clone the repository
+## 1️⃣ Clone the Repository
 
 ```bash
 git clone https://github.com/nikithakoshy166-bot/SmartLibrary.git
+
 cd SmartLibrary
 ```
 
 ---
 
-### 2. Backend Setup
+## 2️⃣ Backend Setup
 
 ```bash
 cd backend
@@ -100,7 +134,7 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-Create a `.env` file inside the backend folder.
+Create a `.env` file inside the **backend** folder.
 
 Example:
 
@@ -116,19 +150,19 @@ ALGORITHM=HS256
 ACCESS_TOKEN_EXPIRE_MINUTES=30
 ```
 
-Run the backend:
+Run the backend
 
 ```bash
 uvicorn main:app --reload
 ```
 
-Backend URL:
+Backend URL
 
 ```
 http://127.0.0.1:8000
 ```
 
-Swagger Documentation:
+Swagger Documentation
 
 ```
 http://127.0.0.1:8000/docs
@@ -136,7 +170,7 @@ http://127.0.0.1:8000/docs
 
 ---
 
-### 3. Frontend Setup
+## 3️⃣ Frontend Setup
 
 ```bash
 cd frontend
@@ -146,7 +180,7 @@ npm install
 npm run dev
 ```
 
-Frontend URL:
+Frontend URL
 
 ```
 http://localhost:5173
@@ -154,53 +188,55 @@ http://localhost:5173
 
 ---
 
-## 🗄️ Database
+# 🗄️ Database
 
-The project uses **MySQL**.
+This project uses **MySQL**.
 
-Tables:
+### Tables
 
 - users
 - books
 - borrow_records
 
+For deployment, the database is hosted on **Railway MySQL**.
+
 ---
 
-## 📷 Screenshots
+# 📷 Screenshots
 
-You can add screenshots here after uploading them.
-
-Example:
+Add screenshots of:
 
 - Login Page
+- Register Page
 - Dashboard
 - Books Page
 - Borrow History
-- Swagger API
+- Swagger API Documentation
 
 ---
 
-## 🔮 Future Enhancements
+# 🔮 Future Enhancements
 
 - Admin Dashboard
 - Role-Based Access Control
-- Online Fine Payment
-- Email Notifications
 - Book Reservation
-- Barcode/QR Code Support
+- Email Notifications
+- Barcode / QR Code Integration
 - Reports and Analytics
+- Dark Mode
 
 ---
 
-## 👩‍💻 Author
+# 👩‍💻 Author
 
 **Nikitha Anna Koshy**
 
-GitHub:
+GitHub Profile
+
 https://github.com/nikithakoshy166-bot
 
 ---
 
-## 📄 License
+# 📄 License
 
 This project was developed for educational and learning purposes.
